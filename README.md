@@ -1,6 +1,9 @@
 # Projeto labecommerce 
 
+Composto por 2 projetos npm que se uniram em um deploy final
 
+BACKEND DIRECTORY: **/LABECOMMERCE-SERVERSIDE**
+FRONTEND DIRECTORY: **/CLIENT**
 ----
 
 
