@@ -1,15 +1,3 @@
-:root {
-  height: 100%;
-  width: 100%;
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-  background:var(--Dark-400);
---Dark-400:#524727 ;}
-
-
-
-
 /* Resets */
 *,
 *::before,
@@ -20,9 +8,23 @@
 
 }
 
+:root {
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  background: rgba(255, 255, 255, 0.842);
+--Dark-400:#FD3974 ;}
+
+
+
+
+
+
 /* Base Style */
 .app {
-  color: white;
+  color: rgb(0, 0, 0);
   font-family: "Open Sans", sans-serif;
   font-size: 1.5rem;
   display: block;
@@ -33,18 +35,74 @@
 }
 
 header{
-  display: flex;
-  flex-flow: flex;
-  flex-flow:  row wrap;
-  justify-content: space-around;
-  padding: 1.51rem;
-  align-self: center;
-  justify-content:center;
-  background: #ffffff;
-  font-size: 1.4rem;
-  color: rgb(7, 5, 5);
+  display: grid;
   text-align: center;
+  min-height: 150px;
+margin-top: 110px;
+background: rgb(255, 255, 255);
+  border-radius: 5px;
+  box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
+ width: 1fr;
+ color:#030102;
 }
+.menu {
+
+  display: grid;
+  max-width: calc(1fr-10px);
+top: 0;
+left: 5px;
+right: 5px;
+background-color: rgb(192, 190, 192);
+  border-bottom: 1px solid #fff;
+  box-shadow: 5px 0 10px rgba(0, 0, 0, .6);
+  position: fixed;
+  z-index: 11;
+}
+
+
+.menu__item {
+  display:flex;
+position: relative;
+  list-style: none;
+  margin-right: 30px;
+}
+
+.item {
+  border-radius: 0.875rem;
+background:whitesmoke;
+box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.10), 0px 2px 8px 0px rgba(0, 0, 0, 0.25), 0px 1px 2px 0px rgba(255, 255, 255, 0.24) inset, 0px 2px 6px 0px rgba(255, 255, 255, 0.30) inset, 0px -2px 4px 0px #000 inset, 0px -1px 0px 0px rgba(0, 0, 0, 0.25) inset;
+}
+
+.link-item {
+
+  text-decoration: none;
+  font-size: 18px;
+  display: inline;
+  color: rgb(16, 6, 6);
+  width:80px;
+  margin: auto;
+}
+
+li.item:hover,
+li.active:hover {
+
+  transition: .4s;
+  -webkit-transition: .4s;
+  -moz-transition: .4s;
+  -ms-transition: .4s;
+  -o-transition: .4s;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+  background-color: yellow;
+}
+
+
+
+
+
 
 nav button{
   margin: 10px auto;
@@ -62,14 +120,23 @@ input, select {
   font-size: 0.7rem;
   max-height: 1rem;
   display: inline;
+  min-height: 2rem;
 min-width: 200px;
 margin: 10px auto;
 margin-left: 1rem;
 box-shadow: 0px 0.6641415357589722px 2.2138051986694336px 0px rgba(0, 0, 0, 0.02), 0px 1.596024513244629px 5.32008171081543px 0px rgba(0, 0, 0, 0.03), 0px 3.0051724910736084px 10.017241477966309px 0px rgba(0, 0, 0, 0.04), 0px 5.360713958740234px 17.869047164916992px 0px rgba(0, 0, 0, 0.04), 0px 10.026626586914062px 33.422088623046875px 0px rgba(0, 0, 0, 0.05), 0px 24px 80px 0px rgba(0, 0, 0, 0.07); 
-}
+background:whitesmoke;
+  text-align: center;
+  height: 60px;
+ 
+  border: none;
+  background: transparent;
+  font-weight: 900px;
+  width: 40%;
 
+}
 .left-side {
-  BACKGROUND: rgb(255, 255, 255);
+  BACKGROUND: rgb(255, 255, 255);s
   width: 100%;
   color: black;
   text-align: center;
@@ -79,8 +146,8 @@ box-shadow: 0px 0.6641415357589722px 2.2138051986694336px 0px rgba(0, 0, 0, 0.02
   grid-template-columns: repeat(3, 0.3);
 }
 
-main section {
-  background: rgb(241, 241, 241);
+.main__section {
+  background: rgb(102, 101, 102);
   display: flex;
   flex-flow: row wrap;
   width: 100%;
@@ -89,16 +156,16 @@ main section {
   align-self:center;
   justify-content: space-around;
 
-  padding: 1rem;
   height: 100%;
-  max-height: 550px;
+  max-height: 510px;
   overflow-y: hidden; 
   align-items: center;
 margin: 30px auto;
-  
+  padding: 0 1rem;
 }
 
 main section ul {
+  align-self: flex-end;
   justify-content: space-around;
   display: flex;
   flex-flow: row wrap;
@@ -107,7 +174,7 @@ main section ul {
 
 ul li {
 display: flex;
-max-width: 450px;
+max-width: 400px;
 flex-flow: column wrap;
 align-self: center;
 justify-content: auto;
@@ -121,14 +188,22 @@ box-shadow: 0px 0.6641415357589722px 2.2138051986694336px 0px rgba(0, 0, 0, 0.02
 }
 
 footer{
-  color: gold;
+ position: fixed;
+ top: 92vh;
+
+ right: 5px;
+color: #0a0a0a;
+max-width: calc(1fr-10px);
+
+left: 5px;
+right: 5px;
+background-color: rgb(192, 190, 192);
+  border-bottom: 1px solid #fff;
+  box-shadow: 5px 0 10px rgba(0, 0, 0, .6);
+  position: fixed;
 }
 
-@media screen and (min-width: 920px){
-  h2{
-      margin: 30px auto;
-  }
-}
+
 
 
 table{

@@ -28,7 +28,7 @@ export function CardProduct({ item }) {
         </table>
         <Box m={'25px'}>
         <Button>Detalhes</Button>
-        </Box></CardCtn >
+        </Box></CardCtn>
     )
 
 }

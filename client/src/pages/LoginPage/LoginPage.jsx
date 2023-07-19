@@ -17,8 +17,20 @@ useEffect(() => {
 
 
      <div>
-        <input name="usersId"/>
-        <input name="usersPassword"/>
+     <div class="container50">
+      <form class="login">
+
+       
+        <p>
+          <label htmlFor="username"> NOME DE USUARIO:</label>
+          <input type="text" name="username" id="username" placeholder="nome de usuario"/>
+        </p>
+        <p>
+          <label htmlFor="password"> Ingrese sua SENHA:</label>
+          <input type="text" name="password__password" id="password__password" placeholder="Senha"/>
+        </p>
+      </form>
+    </div>
      </div>
  </>
  )
